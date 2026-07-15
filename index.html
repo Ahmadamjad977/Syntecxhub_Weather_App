@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Weather App - Syntecxhub Internship</title>
+
+<!-- Styling kept in a separate file -->
+<link rel="stylesheet" href="style.css" />
+
+<!-- React and Babel from CDN, no build step needed -->
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+
+<div id="root"></div>
+
+<!--
+  Scripts must load in this order because each file uses things
+  defined in the ones before it (constants/utils before components,
+  components before App.js). There's no bundler here, so the browser
+  just runs them top to bottom in the same global scope.
+-->
+<script type="text/babel" src="src/constants.js"></script>
+<script type="text/babel" src="src/utils.js"></script>
+
+<script type="text/babel" src="src/components/ErrorMessage.js"></script>
+<script type="text/babel" src="src/components/LoadingSpinner.js"></script>
+<script type="text/babel" src="src/components/SearchBar.js"></script>
+<script type="text/babel" src="src/components/SearchHistory.js"></script>
+<script type="text/babel" src="src/components/ThemeToggle.js"></script>
+<script type="text/babel" src="src/components/CurrentWeather.js"></script>
+<script type="text/babel" src="src/components/HourlyForecast.js"></script>
+<script type="text/babel" src="src/components/DailyForecast.js"></script>
+
+<script type="text/babel" src="src/App.js"></script>
+
+</body>
+</html>
